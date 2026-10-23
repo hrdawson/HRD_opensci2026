@@ -70,5 +70,7 @@ list(
   tar_target(
     name = figure1,
     command = visualise_data(fungi_count)
-  )
+  ),
+  tar_quarto(name = fungi_of_finse,
+             path = "fungi_of_finse.qmd")
 )
