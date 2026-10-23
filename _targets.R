@@ -58,5 +58,9 @@ list(
   tar_target(
     name = fungi_raw,
     command = read_delim(fungi_file) |> suppressWarnings()
+  ),
+  tar_target(
+    name = fungi_clean,
+    command = clean_data(fungi_raw)
   )
 )
