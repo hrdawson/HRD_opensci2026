@@ -50,27 +50,33 @@ tar_source()
 
 # Replace the target list below with your own:
 list(
+  # data file
   tar_target(
     name = fungi_file,
     command = "raw_data/gbif_fungi_finse.csv",
     format = "file"
   ),
+  # import data
   tar_target(
     name = fungi_raw,
     command = read_delim(fungi_file) 
   ),
+  # data processing
   tar_target(
     name = fungi_clean,
     command = clean_data(fungi_raw)
   ),
+  # count fungi
   tar_target(
     name = fungi_count,
     command = count_data(fungi_clean)
   ),
+  # make a figure
   tar_target(
     name = figure1,
     command = visualise_data(fungi_count)
   ),
+  # add a beautiful readable quarto document 
   tar_quarto(name = fungi_of_finse,
              path = "fungi_of_finse.qmd")
 )
