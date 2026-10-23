@@ -6,3 +6,10 @@ clean_data = function(data) {
     # We only want fungarium vs community sci, not DNA
     filter(basisOfRecord != "MATERIAL_SAMPLE")
 }
+
+# Summarise how many of each category ----
+count_data = function(data){
+  data |> 
+  group_by(phylum, basisOfRecord) |> 
+  tally()
+}
