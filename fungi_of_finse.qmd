@@ -1,0 +1,19 @@
+---
+title: "Fungi of Finse"
+author: "Hilary Rose Dawson"
+date: today
+format: html
+editor: visual
+---
+
+# Introduction
+
+Students on the Open Science course have enjoyed seeing the lichen diversity growing around the Finse Field Station. 
+Lichens are classified as Ascomycete fungi, as opposed to most classic "mushroom" shaped fungi which are Basidiomycetes. 
+What fungi are recorded in GBIF in the area around Finse?
+
+# Results
+GBIF has `{r} nrow(fungi_raw)` fungal records in the Finse region. Of these, `{r} nrow(fungi_clean)` have precision ≤1000km. 
+
+```{r message = false}
+
