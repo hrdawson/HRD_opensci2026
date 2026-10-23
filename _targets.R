@@ -9,7 +9,7 @@ library(tarchetypes) # Load other packages as needed.
 
 # Set target options:
 tar_option_set(
-  packages = c() # Packages that your targets need for their tasks.
+  packages = c("dplyr", "readr") # Packages that your targets need for their tasks.
   # format = "qs", # Optionally set the default storage format. qs is fast.
   #
   # Pipelines that take a long time to run may benefit from
@@ -57,7 +57,6 @@ list(
   ),
   tar_target(
     name = fungi_raw,
-    command = read.csv(fungi_file)
-    # format = "qs" # Efficient storage for general data objects.
+    command = read_delim(fungi_file) |> suppressWarnings()
   )
 )
