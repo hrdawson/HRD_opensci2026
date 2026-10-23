@@ -1,9 +1,10 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
 fungi_file|stem|2877913325d3940a|8e7bdc713988d8ba|2c530c1562a7fbd1|-2073316292|raw_data/gbif_fungi_finse.csv|t20749.3854166667s|s1079859b|1079859|file|local|vector|||0||
 fungi_raw|stem|5f5c65ff93515e3a|2e7286ee9c2eba6d|d41aef1e776d4358|146573511||t20749.5037872853s|s149563b|149563|rds|local|vector|||0.154|One or more parsing issues, call `problems()` on your data frame for details, e.g.:   dat <- vroom(...)   problems(dat)|
-visualise_data|function|c08a65bc6762f98f
-clean_data|function|9f950b417e2fb4c7
-count_data|function|dd124ca022b3b144
 fungi_clean|stem|26ab7caf60a361ba|aa79906761e1daa6|c08f08ddbb75bd04|1040629923||t20749.5042543787s|s126315b|126315|rds|local|vector|||0.005||
 fungi_count|stem|96a19d321725fec3|a6907833eb27e2ee|d2288155ea03fc9c|-437759632||t20749.5042547268s|s337b|337|rds|local|vector|||0.007||
 figure1|stem|f8c9f4ae9ebc3dbb|5b90613c23bb57b9|5d47a4509392a35f|-598071735||t20749.5042564267s|s259032b|259032|rds|local|vector|||0.037||
+visualise_data|function|c08a65bc6762f98f
+clean_data|function|9f950b417e2fb4c7
+count_data|function|dd124ca022b3b144
+fungi_of_finse|stem||a57f30b0321ac200|2c530c1562a7fbd1|-1253831658||t20749.5075503384s||0|file|local|vector|||1.11||! Error running quarto CLI from R. Caused by error: ✖ Error returned by quarto CLI. ℹ Rerun with `quiet = FALSE` to see the full error message. Caused by error in `processx::run()`: ! System command 'quarto' failed
