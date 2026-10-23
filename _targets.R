@@ -9,7 +9,7 @@ library(tarchetypes) # Load other packages as needed.
 
 # Set target options:
 tar_option_set(
-  packages = c("dplyr", "readr") # Packages that your targets need for their tasks.
+  packages = c("dplyr", "readr", "ggplot2", "tidyr") # Packages that your targets need for their tasks.
   # format = "qs", # Optionally set the default storage format. qs is fast.
   #
   # Pipelines that take a long time to run may benefit from
@@ -45,7 +45,7 @@ tar_option_set(
 )
 
 # Run the R scripts in the R/ folder with your custom functions:
-tar_source()
+tar_source("R/functions.R")
 # tar_source("other_functions.R") # Source other scripts as needed.
 
 # Replace the target list below with your own:
@@ -57,10 +57,18 @@ list(
   ),
   tar_target(
     name = fungi_raw,
-    command = read_delim(fungi_file) |> suppressWarnings()
+    command = read_delim(fungi_file) 
   ),
   tar_target(
     name = fungi_clean,
     command = clean_data(fungi_raw)
+  ),
+  tar_target(
+    name = fungi_count,
+    command = count_data(fungi_clean)
+  ),
+  tar_target(
+    name = figure1,
+    command = visualise_data(fungi_count)
   )
 )
