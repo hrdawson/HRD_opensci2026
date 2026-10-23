@@ -4,7 +4,15 @@ author: "Hilary Rose Dawson"
 date: today
 format: html
 editor: visual
+execute: 
+  echo: false
 ---
+
+
+```{r}
+#| label: setup
+library(targets)
+```
 
 # Introduction
 
@@ -13,9 +21,17 @@ Lichens are classified as Ascomycete fungi, as opposed to most classic "mushroom
 What fungi are recorded in GBIF in the area around Finse?
 
 # Results
-GBIF has `{r} nrow(fungi_raw)` fungal records in the Finse region. Of these, `{r} nrow(fungi_clean)` have precision ≤1000km. Most of these records are Ascomycetes, reflecting the high lichen diversity of the area (Figure 1). Community science data is more common than fungarium data.
+```{r}
+#| label: load-targets
+tar_load_everything()
+```
+
+GBIF has `{r} nrow(fungi_raw)` fungal records in the Finse region. Of these, `{r} nrow(fungi_clean)` have precision ≤1000km. Most of these records are Ascomycetes, reflecting the high lichen diversity of the area (@fig-bar). Community science data is more common than fungarium data.
 
 ```{r} 
-read_tar(figure1)
+#| label: fig-bar
+#| fig-cap: Comparison of basis of record for Ascomycota and Basidiomycota in Finse, Norway.
+
+
+tar_read(figure1)
 ```
-*Figure 1: Comparison of basis of record for Ascomycota and Basidiomycota in Finse, Norway.*
