@@ -13,3 +13,12 @@ count_data = function(data){
   group_by(phylum, basisOfRecord) |> 
   tally()
 }
+
+# Visualise the results ----
+visualise_data = function(data){
+  ggplot(data,
+         aes(x = phylum, y = n, fill = basisOfRecord)) +
+    geom_bar(position="stack", stat="identity") +
+    scale_fill_manual(values = c("lightgreen", "brown4")) +
+    theme_bw()
+}
