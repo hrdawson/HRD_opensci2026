@@ -7,4 +7,4 @@ figure1|stem|f8c9f4ae9ebc3dbb|5b90613c23bb57b9|5d47a4509392a35f|-598071735||t207
 visualise_data|function|c08a65bc6762f98f
 clean_data|function|9f950b417e2fb4c7
 count_data|function|dd124ca022b3b144
-fungi_of_finse|stem||a57f30b0321ac200|2c530c1562a7fbd1|-1253831658||t20749.5075503384s||0|file|local|vector|||1.11||! Error running quarto CLI from R. Caused by error: ✖ Error returned by quarto CLI. ℹ Rerun with `quiet = FALSE` to see the full error message. Caused by error in `processx::run()`: ! System command 'quarto' failed
+fungi_of_finse|stem|d76760a96788a913|f76a52fe133f554a|b8d4eeaaa626a980|-1253831658|fungi_of_finse_files*fungi_of_finse.html*fungi_of_finse.qmd|t20749.5139052838s|s1013735b|1013735|file|local|vector|||2.826||
